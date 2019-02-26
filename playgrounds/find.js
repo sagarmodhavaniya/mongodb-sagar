@@ -8,7 +8,7 @@ MongoClient.connect('mongodb://localhost:27017/',(err,db)=>{
         console.log("connected done")
         var dbo = db.db("mydb");
        dbo.collection('data').find({
-        city:"rajkot"
+        _id:new ObjectID('5c751880de86c83c5709e656exit')
     }).toArray().then((docs)=>{
             console.log(JSON.stringify(docs,undefined,2))
        },(err)=>{

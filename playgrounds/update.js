@@ -7,7 +7,7 @@ MongoClient.connect('mongodb://localhost:27017/',(err,db)=>{
         }
         console.log("connected done")
        var dd=db.db('mydb')
-       dd.collection('data').findOneAndUpdate({city:"baroda"},{$set:{city:"rajkot"}},{
+       dd.collection('data').findOneAndUpdate({id:new ObjectID('5c751880de86c83c5709e656')},{$set:{city:"rajkot"}},{
            returnOriginal:false
        }).then((res)=>{
 console.log(res)
